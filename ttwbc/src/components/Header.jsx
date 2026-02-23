@@ -8,6 +8,7 @@ const Header = ({ darkMode, setDarkMode }) => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Programs", href: "#programs" },
+    { name: "AcademicRequirements", href: "#academic-requirements" },
     { name: "Faculty", href: "#faculty" },
     { name: "Contact", href: "#contact" },
   ];
@@ -33,11 +34,8 @@ const Header = ({ darkMode, setDarkMode }) => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                Teach The World
+                Teach The Word Bible Institute
               </h1>
-              <p className="text-sm text-amber-600 font-medium">
-                Bible College
-              </p>
             </div>
           </div>
 
@@ -56,13 +54,6 @@ const Header = ({ darkMode, setDarkMode }) => {
 
           {/* Dark Mode Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
-            >
-              {darkMode ? "☀️" : "🌙"}
-            </button>
-
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"

@@ -46,11 +46,11 @@ const About = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-300">
+              {/* <button className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-300">
                 Our Mission
-              </button>
-              <button className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-amber-500 hover:text-amber-600 font-bold py-3 px-6 rounded-full transition-all duration-300">
-                Meet Our Leadership
+              </button> */}
+              <button className="border-2 cursor-pointer border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-amber-500 hover:text-amber-600 font-bold py-3 px-6 rounded-full transition-all duration-300">
+                Meet Our Crew
               </button>
             </div>
           </div>

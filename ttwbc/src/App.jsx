@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Programs from "./components/Programs";
 import Faculty from "./components/Faculty";
-import Testimonials from "./components/Testimonials";
+import AcademicRequirements from "./components/AcademicRequirements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -19,7 +19,7 @@ function App() {
       <Hero />
       <About />
       <Programs />
-      <Testimonials />
+      <AcademicRequirements />
       <Faculty />
       <Contact />
       <Footer />

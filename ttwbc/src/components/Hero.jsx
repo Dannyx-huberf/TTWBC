@@ -26,29 +26,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <button className="bg-amber-500 cursor-pointer hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               Apply Now
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300">
+            <button className="border-2 cursor-pointer border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300">
               Explore Programs
             </button>
-          </div>
-
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="text-3xl font-bold text-amber-400 mb-2">35+</div>
-              <div className="text-gray-300">Years of Excellence</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="text-3xl font-bold text-amber-400 mb-2">
-                2,000+
-              </div>
-              <div className="text-gray-300">Graduates Worldwide</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="text-3xl font-bold text-amber-400 mb-2">98%</div>
-              <div className="text-gray-300">Ministry Placement</div>
-            </div>
           </div>
         </div>
       </div>
