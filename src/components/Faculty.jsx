@@ -77,9 +77,15 @@ const Faculty = () => {
               </div>
 
               {/* Contact Button */}
-              <button className="w-full cursor-pointer bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Contact Bro. Tony
-              </button>
+              <a
+                href="https://wa.me/2348030618653?text=Hello%20Bro%20Tony,%20I%20would%20like%20to%20make%20an%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="w-full cursor-pointer bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Contact Bro. Tony
+                </button>
+              </a>
             </div>
           </div>
 
@@ -107,7 +113,7 @@ const Faculty = () => {
                     key={index}
                     className="flex items-start text-gray-700 dark:text-gray-300"
                   >
-                    <span className="w-6 h-6 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center text-amber-600 dark:text-amber-400 mr-3 flex-shrink-0 mt-0.5">
+                    <span className="w-6 h-6 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center text-amber-600 dark:text-amber-400 mr-3 shrink-0 mt-0.5">
                       {index + 1}
                     </span>
                     <span className="text-lg">{item}</span>
@@ -117,7 +123,7 @@ const Faculty = () => {
             </div>
 
             {/* Family & Personal Life */}
-            <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div className="bg-linear-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
               <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                 <svg
                   className="w-7 h-7 text-amber-500 mr-3"
@@ -191,7 +197,7 @@ const Faculty = () => {
 
         {/* Call to Action Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl p-12 max-w-4xl mx-auto shadow-2xl">
+          <div className="bg-linear-to-r from-amber-500 to-amber-600 rounded-3xl p-12 max-w-4xl mx-auto shadow-2xl">
             <h3 className="text-3xl font-bold text-white mb-4">
               Connect with Our Founder
             </h3>

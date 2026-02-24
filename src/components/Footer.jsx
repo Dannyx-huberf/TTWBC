@@ -1,6 +1,6 @@
 // components/Footer.js
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -29,8 +29,10 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Equipping leaders for effective ministry through quality biblical
-              education, spiritual formation, and practical training since 1985.
+              Raising sound, Scripture-minded individuals who boldly stand for
+              truth in every season and situation, while inspiring a deep love,
+              genuine passion, and lifelong commitment to studying the Holy
+              Bible..
             </p>
             <div className="mt-8">
               <h4 className="font-bold text-gray-900 dark:text-white mb-4">
@@ -38,9 +40,6 @@ const Footer = () => {
               </h4>
               <div className="flex space-x-4">
                 {[
-                  { name: "Facebook", icon: <FaFacebookF />, link: "#" },
-                  { name: "Twitter", icon: <FaTwitter />, link: "#" },
-                  { name: "Instagram", icon: <FaInstagram />, link: "#" },
                   {
                     name: "YouTube",
                     icon: <FaYoutube />,

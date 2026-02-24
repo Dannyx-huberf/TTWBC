@@ -1,6 +1,6 @@
 // components/Contact.js
 import React, { useState } from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -206,9 +206,6 @@ const Contact = () => {
               </h4>
               <div className="flex space-x-4">
                 {[
-                  { name: "Facebook", icon: <FaFacebookF />, link: "#" },
-                  { name: "Twitter", icon: <FaTwitter />, link: "#" },
-                  { name: "Instagram", icon: <FaInstagram />, link: "#" },
                   {
                     name: "YouTube",
                     icon: <FaYoutube />,
@@ -254,8 +251,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                     placeholder="Your Name"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 
+          rounded-xl shadow-sm focus:shadow-md 
+          focus:ring-2 focus:ring-amber-500 focus:border-transparent 
+          transition-all duration-200 
+          bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   />
                 </div>
 
@@ -269,8 +270,12 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                     placeholder="your.email@example.com"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 
+          rounded-xl shadow-sm focus:shadow-md 
+          focus:ring-2 focus:ring-amber-500 focus:border-transparent 
+          transition-all duration-200 
+          bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   />
                 </div>
               </div>
@@ -285,8 +290,12 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                     placeholder="(555) 123-4567"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 
+          rounded-xl shadow-sm focus:shadow-md 
+          focus:ring-2 focus:ring-amber-500 focus:border-transparent 
+          transition-all duration-200 
+          bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   />
                 </div>
 
@@ -298,7 +307,11 @@ const Contact = () => {
                     name="program"
                     value={formData.program}
                     onChange={handleChange}
-                    className="w-full px-2 sm:px-4 py-2 sm:py-3 text-[13px] sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 
+          rounded-xl shadow-sm focus:shadow-md 
+          focus:ring-2 focus:ring-amber-500 focus:border-transparent 
+          transition-all duration-200 
+          bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   >
                     <option value="">Select a program</option>
                     <option value="Diploma of Biblical Studies">
@@ -324,21 +337,44 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="Tell us about your interests and questions..."
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 
+        rounded-xl shadow-sm focus:shadow-md 
+        focus:ring-2 focus:ring-amber-500 focus:border-transparent 
+        transition-all duration-200 
+        bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                disabled={status.type === "loading"}
+                className="w-full cursor-pointer disabled:cursor-not-allowed disabled:opacity-70 
+      bg-gradient-to-r from-amber-500 to-amber-600 
+      hover:from-amber-600 hover:to-amber-700
+      text-white font-semibold tracking-wide 
+      py-4 px-6 rounded-xl 
+      transition-all duration-300 
+      transform hover:scale-[1.02] 
+      shadow-lg hover:shadow-2xl"
               >
-                Send Message
+                {status.type === "loading" ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                    Sending...
+                  </span>
+                ) : (
+                  "Send Message"
+                )}
               </button>
+
+              <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3">
+                Please click the button once and wait for confirmation.
+              </p>
 
               {status.message && (
                 <div
-                  className={`mt-4 p-4 rounded-lg text-center font-medium ${
+                  className={`mt-4 p-4 rounded-xl text-center font-medium ${
                     status.type === "success"
                       ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-200"
                       : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-200"

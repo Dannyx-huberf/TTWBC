@@ -18,7 +18,7 @@ const AcademicRequirements = () => {
           category: "Standard Admission",
           items: [
             "High School Certificate or equivalent",
-            "English Language credit pass (minimum C6)",
+            "English Language credit pass ",
             "Official academic transcripts",
             "Completed application form",
           ],
@@ -59,9 +59,9 @@ const AcademicRequirements = () => {
           title: "Direct Entry (Year 1)",
           requirements: [
             "High School Certificate or equivalent",
-            "English Language credit pass (minimum C6)",
+            "English Language credit pass ",
             "Minimum GPA of 2.5 or equivalent",
-            "Official academic transcripts",
+            "Official academic Statement of Result",
           ],
         },
         {
@@ -71,17 +71,16 @@ const AcademicRequirements = () => {
             "High School Certificate or equivalent",
             "English Language credit pass",
             "Minimum GPA of 3.0 in diploma program",
-            "Official transcripts from previous institution",
+            "Statement of Result from previous institution",
           ],
         },
         {
           title: "Advanced Standing - Year 3",
           requirements: [
-            "TTWBC Diploma in Biblical Studies",
+            "TWBI Diploma in Biblical Studies",
             "High School Certificate or equivalent",
-            "English Language credit pass",
-            "Minimum GPA of 3.2 in diploma program",
-            "Official TTWBC transcripts",
+            "English Language proficiency",
+            "Official TWBI Statement of Result",
             "Faculty recommendation",
           ],
         },
@@ -91,14 +90,13 @@ const AcademicRequirements = () => {
         "High School Certificate",
         "Previous Diploma Certificate (if applicable)",
         "All Academic Transcripts",
-        "Three Letters of Recommendation",
-        "Passport Photographs (4 copies)",
+        "Two Letters of Recommendation",
+        "Passport Photographs (1 copy)",
         "Application Fee Receipt",
         "Personal Statement (500-700 words)",
-        "Church Endorsement Letter",
       ],
       specialNote:
-        "Applicants with TTWBC Diploma are admitted directly into Year 3. Other recognized diplomas qualify for Year 2 entry.",
+        "Applicants with TWBI Diploma are admitted directly into Year 3. Other recognized diplomas qualify for Year 2 entry.",
     },
   };
 
@@ -107,7 +105,7 @@ const AcademicRequirements = () => {
   return (
     <section
       id="academicrequirements"
-      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+      className="py-20 bg-linear-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
     >
       <div className="container mx-auto px-4">
         {/* Header Section */}
@@ -133,7 +131,7 @@ const AcademicRequirements = () => {
               onClick={() => setActiveTab("diploma")}
               className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                 activeTab === "diploma"
-                  ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg transform scale-105"
+                  ? "bg-linear-to-r from-emerald-500 to-teal-600 text-white shadow-lg transform scale-105"
                   : "text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
               }`}
             >
@@ -144,7 +142,7 @@ const AcademicRequirements = () => {
               onClick={() => setActiveTab("bachelor")}
               className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                 activeTab === "bachelor"
-                  ? "bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg transform scale-105"
+                  ? "bg-linear-to-r from-blue-500 to-indigo-600 text-white shadow-lg transform scale-105"
                   : "text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
               }`}
             >
@@ -158,7 +156,7 @@ const AcademicRequirements = () => {
         <div className="max-w-6xl mx-auto">
           {/* Program Header Card */}
           <div
-            className={`bg-gradient-to-r ${currentReq.color} rounded-3xl p-8 md:p-12 mb-8 text-white shadow-2xl transform hover:scale-[1.02] transition-transform duration-300`}
+            className={`bg-linear-to-r ${currentReq.color} rounded-3xl p-8 md:p-12 mb-8 text-white shadow-2xl transform hover:scale-[1.02] transition-transform duration-300`}
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
               <div>
@@ -191,7 +189,7 @@ const AcademicRequirements = () => {
                     >
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                         <span
-                          className={`w-10 h-10 bg-gradient-to-r ${currentReq.color} rounded-full flex items-center justify-center text-white mr-4`}
+                          className={`w-10 h-10 bg-linear-to-r ${currentReq.color} rounded-full flex items-center justify-center text-white mr-4`}
                         >
                           {index + 1}
                         </span>
@@ -204,7 +202,7 @@ const AcademicRequirements = () => {
                             className="flex items-start text-gray-700 dark:text-gray-300"
                           >
                             <svg
-                              className="w-6 h-6 text-emerald-500 mr-3 flex-shrink-0"
+                              className="w-6 h-6 text-emerald-500 mr-3 shrink-0"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >

@@ -60,7 +60,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <div className="inline-block bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Welcome to TTWBC
+            Welcome to TWBI
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             About{" "}
