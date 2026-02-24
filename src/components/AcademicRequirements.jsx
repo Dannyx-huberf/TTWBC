@@ -448,7 +448,7 @@ const AcademicRequirements = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://form.svhrt.com/6699aa594719a649c70cdac2"
+                  href="https://form.jotform.com/260545102374046"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-white cursor-pointer text-amber-600 hover:bg-amber-50 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
