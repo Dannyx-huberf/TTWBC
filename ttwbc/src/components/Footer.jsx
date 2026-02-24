@@ -73,7 +73,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 "Home",
-                "About Us",
+                "About",
                 "Programs",
                 "AcademicRequirements",
                 "Faculty",

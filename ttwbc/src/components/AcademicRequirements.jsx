@@ -77,11 +77,11 @@ const AcademicRequirements = () => {
         {
           title: "Advanced Standing - Year 3",
           requirements: [
-            "TWBI Diploma in Biblical Studies",
+            "TTWBC Diploma in Biblical Studies",
             "High School Certificate or equivalent",
             "English Language credit pass",
             "Minimum GPA of 3.2 in diploma program",
-            "Official TWBI transcripts",
+            "Official TTWBC transcripts",
             "Faculty recommendation",
           ],
         },
@@ -98,7 +98,7 @@ const AcademicRequirements = () => {
         "Church Endorsement Letter",
       ],
       specialNote:
-        "Applicants with TWBI Diploma are admitted directly into Year 3. Other recognized diplomas qualify for Year 2 entry.",
+        "Applicants with TTWBC Diploma are admitted directly into Year 3. Other recognized diplomas qualify for Year 2 entry.",
     },
   };
 
