@@ -337,10 +337,10 @@ const AcademicRequirements = () => {
           </div>
 
           {/* Special Note */}
-          <div className="bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-2xl p-8 mb-8 border-l-8 border-amber-500">
+          <div className="bg-linear-to-r from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-2xl p-8 mb-8 border-l-8 border-amber-500">
             <div className="flex items-start">
               <svg
-                className="w-8 h-8 text-amber-600 dark:text-amber-400 mr-4 flex-shrink-0"
+                className="w-8 h-8 text-amber-600 dark:text-amber-400 mr-4 shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -438,7 +438,7 @@ const AcademicRequirements = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl p-12 shadow-2xl">
+            <div className="bg-linear-to-r from-amber-500 to-amber-600 rounded-3xl p-12 shadow-2xl">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Ready to Begin Your Journey?
               </h3>
@@ -447,9 +447,14 @@ const AcademicRequirements = () => {
                 learning more about God.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white cursor-pointer text-amber-600 hover:bg-amber-50 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Download Application Form
-                </button>
+                <a
+                  href="https://form.svhrt.com/6699aa594719a649c70cdac2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white cursor-pointer text-amber-600 hover:bg-amber-50 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Fill Application Form
+                </a>
               </div>
               <p className="text-amber-100 text-sm mt-6">
                 Have questions? Call us at{" "}

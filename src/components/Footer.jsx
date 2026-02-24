@@ -1,6 +1,6 @@
 // components/Footer.js
 import React from "react";
-import { FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -40,6 +40,11 @@ const Footer = () => {
               </h4>
               <div className="flex space-x-4">
                 {[
+                  {
+                    name: "Facebook",
+                    icon: <FaFacebook />,
+                    link: "https://www.facebook.com/share/14SbBM1q8gT/?mibextid=qi2Omg",
+                  },
                   {
                     name: "YouTube",
                     icon: <FaYoutube />,

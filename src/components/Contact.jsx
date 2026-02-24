@@ -1,6 +1,6 @@
 // components/Contact.js
 import React, { useState } from "react";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaFacebook } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -207,6 +207,11 @@ const Contact = () => {
               <div className="flex space-x-4">
                 {[
                   {
+                    name: "Facebook",
+                    icon: <FaFacebook />,
+                    link: "https://www.facebook.com/share/14SbBM1q8gT/?mibextid=qi2Omg",
+                  },
+                  {
                     name: "YouTube",
                     icon: <FaYoutube />,
                     link: "https://www.youtube.com/@TeachtheWordBibleChurch",
@@ -350,7 +355,7 @@ const Contact = () => {
                 type="submit"
                 disabled={status.type === "loading"}
                 className="w-full cursor-pointer disabled:cursor-not-allowed disabled:opacity-70 
-      bg-gradient-to-r from-amber-500 to-amber-600 
+      bg-linear-to-r from-amber-500 to-amber-600 
       hover:from-amber-600 hover:to-amber-700
       text-white font-semibold tracking-wide 
       py-4 px-6 rounded-xl 
