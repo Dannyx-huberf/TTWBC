@@ -8,6 +8,7 @@ const Programs = () => {
       color: "from-blue-500 to-indigo-600",
       programs: [
         {
+          id: "diploma",
           title: "Diploma of Biblical Studies",
           duration: "8 Trimesters",
           description:
@@ -22,6 +23,7 @@ const Programs = () => {
           ],
         },
         {
+          id: "bachelor",
           title: "Bachelor of Biblical Studies",
           duration: "13 Trimesters",
           description:
@@ -44,6 +46,7 @@ const Programs = () => {
       color: "from-amber-500 to-orange-600",
       programs: [
         {
+          id: "certificate",
           title: "Certificate in Christian Praise and Worship",
           duration: "Coming Soon",
           description:
@@ -95,6 +98,7 @@ const Programs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {school.programs.map((program, programIndex) => (
                 <div
+                  id={program.id}
                   key={programIndex}
                   className={`bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group ${
                     program.comingSoon ? "opacity-90" : ""
@@ -208,30 +212,7 @@ const Programs = () => {
                   Faculty
                 </div>
                 <div className="font-bold text-gray-900 dark:text-white">
-                  Experienced Scholars & Practitioners
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center mr-3">
-                <svg
-                  className="w-5 h-5 text-amber-600 dark:text-amber-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  Accreditation
-                </div>
-                <div className="font-bold text-gray-900 dark:text-white">
-                  Nationally Recognized
+                  Experienced Scholar & Practitioner
                 </div>
               </div>
             </div>

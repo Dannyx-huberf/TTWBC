@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
             <span className="text-sm font-medium">
-              Now Accepting Applications for Fall 2024
+              Now Accepting Applications
             </span>
           </div>
 
@@ -27,10 +27,12 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-amber-500 cursor-pointer hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              Apply Now
+              <a href="#academicrequirements" className="underline-offset-0">
+                Apply Now
+              </a>
             </button>
             <button className="border-2 cursor-pointer border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300">
-              Explore Programs
+              <a href="#programs">Explore Programs</a>
             </button>
           </div>
         </div>

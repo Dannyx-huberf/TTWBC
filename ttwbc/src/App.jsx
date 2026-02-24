@@ -7,6 +7,7 @@ import Faculty from "./components/Faculty";
 import AcademicRequirements from "./components/AcademicRequirements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,6 +24,7 @@ function App() {
       <Faculty />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

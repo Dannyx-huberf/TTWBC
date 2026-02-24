@@ -1,5 +1,6 @@
 // components/Footer.js
 import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -31,15 +32,38 @@ const Footer = () => {
               Equipping leaders for effective ministry through quality biblical
               education, spiritual formation, and practical training since 1985.
             </p>
-            <div className="flex space-x-4">
-              {["Facebook", "Twitter", "Instagram", "YouTube"].map((social) => (
-                <button
-                  key={social}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-amber-600 hover:text-white transition-all duration-300"
-                >
-                  {social[0]}
-                </button>
-              ))}
+            <div className="mt-8">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-4">
+                Follow Us
+              </h4>
+              <div className="flex space-x-4">
+                {[
+                  { name: "Facebook", icon: <FaFacebookF />, link: "#" },
+                  { name: "Twitter", icon: <FaTwitter />, link: "#" },
+                  { name: "Instagram", icon: <FaInstagram />, link: "#" },
+                  {
+                    name: "YouTube",
+                    icon: <FaYoutube />,
+                    link: "https://www.youtube.com/@TeachtheWordBibleChurch",
+                  },
+                ].map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-lg 
+                                 bg-gray-200 dark:bg-gray-700 
+                                 text-gray-600 dark:text-gray-400
+                                 transition-all duration-300 
+                                 hover:bg-amber-500 hover:text-white 
+                                 hover:scale-110 hover:-translate-y-1
+                                 shadow-md hover:shadow-lg"
+                  >
+                    <span className="text-lg">{social.icon}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -51,6 +75,7 @@ const Footer = () => {
                 "Home",
                 "About Us",
                 "Programs",
+                "AcademicRequirements",
                 "Faculty",
                 "Admissions",
                 "Contact",
@@ -70,21 +95,22 @@ const Footer = () => {
           {/* Programs */}
           <div>
             <h4 className="text-lg font-bold mb-6">Programs</h4>
+
             <ul className="space-y-3">
               {[
-                "Bachelor of Theology",
-                "Christian Leadership",
-                "Biblical Counseling",
-                "Missions & Evangelism",
-                "Online Courses",
-                "Continuing Education",
+                { name: "Diploma of Biblical Studies", link: "#diploma" },
+                { name: "Bachelor of Biblical Studies", link: "#bachelor" },
+                {
+                  name: "Certificate in Christian Praise and Worship",
+                  link: "#certificate",
+                },
               ].map((program) => (
-                <li key={program}>
+                <li key={program.name}>
                   <a
-                    href="#"
+                    href={program.link}
                     className="text-gray-400 hover:text-amber-400 transition-colors duration-200"
                   >
-                    {program}
+                    {program.name}
                   </a>
                 </li>
               ))}
@@ -108,7 +134,7 @@ const Footer = () => {
                   />
                 </svg>
                 <span className="text-gray-400">
-                  123 Faith Avenue, Spiritual City, SC 12345
+                  5 Oyawuyi Lane Morogbo Junction Lagos State Nigeria
                 </span>
               </div>
               <div className="flex items-center">
@@ -119,7 +145,7 @@ const Footer = () => {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="text-gray-400">(555) 123-4567</span>
+                <span className="text-gray-400">(+234) 901 744 2039</span>
               </div>
               <div className="flex items-center">
                 <svg
@@ -130,36 +156,16 @@ const Footer = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-                <span className="text-gray-400">admissions@ttwbc.edu</span>
+                <span className="text-gray-400">twbi2023@gmail.com</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Teach The World Bible College. All rights reserved.
+        <div className="border-t border-gray-800 mt-12 pt-8 md:flex-row text-center ">
+          <p className="text-gray-400 text-sm text-center">
+            © 2026 Teach The World Bible College. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-amber-400 text-sm transition-colors"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-amber-400 text-sm transition-colors"
-            >
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-amber-400 text-sm transition-colors"
-            >
-              Site Map
-            </a>
-          </div>
         </div>
       </div>
     </footer>

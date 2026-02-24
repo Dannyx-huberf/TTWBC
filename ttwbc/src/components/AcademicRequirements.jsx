@@ -106,7 +106,7 @@ const AcademicRequirements = () => {
 
   return (
     <section
-      id="academic-requirements"
+      id="academicrequirements"
       className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
     >
       <div className="container mx-auto px-4">
@@ -364,68 +364,72 @@ const AcademicRequirements = () => {
           </div>
 
           {/* Quick Comparison Table */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 text-center">
               Quick Program Comparison
             </h3>
+
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full text-sm sm:text-base">
                 <thead>
                   <tr className="border-b-2 border-gray-200 dark:border-gray-700">
-                    <th className="py-4 px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
+                    <th className="py-2 sm:py-4 px-3 sm:px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
                       Program
                     </th>
-                    <th className="py-4 px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
+                    <th className="py-2 sm:py-4 px-3 sm:px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
                       Duration
                     </th>
-                    <th className="py-4 px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
+                    <th className="py-2 sm:py-4 px-3 sm:px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
                       Entry Requirements
                     </th>
-                    <th className="py-4 px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
+                    <th className="hidden sm:table-cell py-2 sm:py-4 px-3 sm:px-6 text-left text-gray-700 dark:text-gray-300 font-semibold">
                       Advanced Standing
                     </th>
                   </tr>
                 </thead>
+
                 <tbody>
                   <tr className="border-b border-gray-100 dark:border-gray-700">
-                    <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 font-medium text-gray-900 dark:text-white">
                       Diploma
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       2 years
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       High School Certificate
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="hidden sm:table-cell py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       Mature student waiver available
                     </td>
                   </tr>
+
                   <tr className="border-b border-gray-100 dark:border-gray-700">
-                    <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 font-medium text-gray-900 dark:text-white">
                       Bachelor (Direct)
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       4 years
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       High School Certificate
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="hidden sm:table-cell py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       N/A
                     </td>
                   </tr>
+
                   <tr className="border-b border-gray-100 dark:border-gray-700">
-                    <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 font-medium text-gray-900 dark:text-white">
                       Bachelor (Advanced)
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       2-3 years
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       Previous Diploma
                     </td>
-                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">
+                    <td className="hidden sm:table-cell py-2 sm:py-4 px-3 sm:px-6 text-gray-600 dark:text-gray-400">
                       Year 2 or 3 entry
                     </td>
                   </tr>

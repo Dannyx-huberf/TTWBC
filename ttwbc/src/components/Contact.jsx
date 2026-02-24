@@ -1,5 +1,7 @@
 // components/Contact.js
 import React, { useState } from "react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +12,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [status, setStatus] = useState({ type: "", message: "" });
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,32 +23,68 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your interest! We will contact you soon.");
+
+    emailjs
+      .send(
+        "service_ch3sa2a",
+        "template_usgujjh",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          program: formData.program,
+          message: formData.message,
+        },
+        "xu5dFSJkANWVmNK1E",
+      )
+      .then(
+        (result) => {
+          // Show alert
+          alert("Thank you! Your message has been sent.");
+
+          // Clear input fields
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            program: "",
+            message: "",
+          });
+
+          // Optional: reset status if you want
+          setStatus({ type: "success", message: "" });
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Oops! Something went wrong. Please try again.");
+          setStatus({ type: "error", message: error.text });
+        },
+      );
   };
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Contact Us
           </h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Ready to start your journey? Get in touch with our admissions team
+            Ready to start your journey? Get in touch with us.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Get In Touch
             </h3>
 
             <div className="space-y-6">
+              {/* Location */}
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-white mr-4">
                   <svg
@@ -72,11 +112,12 @@ const Contact = () => {
                     Our Location
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    123 Faith Avenue, Spiritual City, SC 12345
+                    5 Oyawuyi Lane Morogbo Junction Lagos State Nigeria
                   </p>
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-white mr-4">
                   <svg
@@ -98,11 +139,12 @@ const Contact = () => {
                     Phone Number
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    (555) 123-4567
+                    (+234) 901 744 2039
                   </p>
                 </div>
               </div>
 
+              {/* Email */}
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-white mr-4">
                   <svg
@@ -124,11 +166,12 @@ const Contact = () => {
                     Email Address
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    admissions@ttwbc.edu
+                    twbi2023@gmail.com
                   </p>
                 </div>
               </div>
 
+              {/* Office Hours */}
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-white mr-4">
                   <svg
@@ -156,21 +199,38 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Socials */}
             <div className="mt-8">
               <h4 className="font-bold text-gray-900 dark:text-white mb-4">
                 Follow Us
               </h4>
               <div className="flex space-x-4">
-                {["Facebook", "Twitter", "Instagram", "YouTube"].map(
-                  (social) => (
-                    <button
-                      key={social}
-                      className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-amber-500 hover:text-white transition-all duration-300"
-                    >
-                      {social[0]}
-                    </button>
-                  )
-                )}
+                {[
+                  { name: "Facebook", icon: <FaFacebookF />, link: "#" },
+                  { name: "Twitter", icon: <FaTwitter />, link: "#" },
+                  { name: "Instagram", icon: <FaInstagram />, link: "#" },
+                  {
+                    name: "YouTube",
+                    icon: <FaYoutube />,
+                    link: "https://www.youtube.com/@TeachtheWordBibleChurch",
+                  },
+                ].map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-lg 
+                     bg-gray-200 dark:bg-gray-700 
+                     text-gray-600 dark:text-gray-400
+                     transition-all duration-300 
+                     hover:bg-amber-500 hover:text-white 
+                     hover:scale-110 hover:-translate-y-1
+                     shadow-md hover:shadow-lg"
+                  >
+                    <span className="text-lg">{social.icon}</span>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -181,6 +241,7 @@ const Contact = () => {
               Send us a Message
             </h3>
 
+            {/* Form Section */}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -237,13 +298,18 @@ const Contact = () => {
                     name="program"
                     value={formData.program}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                    className="w-full px-2 sm:px-4 py-2 sm:py-3 text-[13px] sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   >
                     <option value="">Select a program</option>
-                    <option value="theology">Bachelor of Theology</option>
-                    <option value="leadership">Christian Leadership</option>
-                    <option value="counseling">Biblical Counseling</option>
-                    <option value="missions">Missions & Evangelism</option>
+                    <option value="Diploma of Biblical Studies">
+                      Diploma of Biblical Studies
+                    </option>
+                    <option value="Bachelor of Biblical Studies">
+                      Bachelor of Biblical Studies
+                    </option>
+                    <option value="Cert. in Christian Praise & Worship">
+                      Cert. in Christian Praise & Worship
+                    </option>
                   </select>
                 </div>
               </div>
@@ -269,6 +335,18 @@ const Contact = () => {
               >
                 Send Message
               </button>
+
+              {status.message && (
+                <div
+                  className={`mt-4 p-4 rounded-lg text-center font-medium ${
+                    status.type === "success"
+                      ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-200"
+                      : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-200"
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
             </form>
           </div>
         </div>

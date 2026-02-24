@@ -1,11 +1,12 @@
 // components/Faculty.js
 import React from "react";
+import founderImage from "../image/Founder.png";
 
 const Faculty = () => {
   const founder = {
     name: "Bro. Chukwuemeka Tony Ndubuisi",
     role: "Founder & Lead Minister",
-    image: "👨‍🏫",
+    image: `${founderImage}`,
     biography:
       "Tony is a minister of God, founder of Teach the Word Bible Church and Teach the Word Bible Institute, a book-by-book Bible Institute where faithful leaders are trained to train others.",
     education: "Graduate of Educational Management",
@@ -41,9 +42,11 @@ const Faculty = () => {
             <div className="flex flex-col items-center text-center">
               {/* Profile Image */}
               <div className="relative mb-6">
-                <div className="w-32 h-32 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-5xl mx-auto border-4 border-white dark:border-gray-800 shadow-lg">
-                  {founder.image}
-                </div>
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="w-48 h-48 object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-xl"
+                />
               </div>
 
               {/* Name and Title */}
