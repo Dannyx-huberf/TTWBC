@@ -31,7 +31,7 @@ const Faculty = () => {
           </h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Meet the visionary leader behind Teach The World Bible College
+            Meet the visionary leader behind Teach The World Bible Institute
           </p>
         </div>
 

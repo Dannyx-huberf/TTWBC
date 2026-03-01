@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* College Info */}
+          {/* Institute Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center">
@@ -25,7 +25,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Teach The World</h3>
-                <p className="text-amber-400 text-sm">Bible College</p>
+                <p className="text-amber-400 text-sm">Bible Institute</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
@@ -168,7 +168,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 md:flex-row text-center ">
           <p className="text-gray-400 text-sm text-center">
-            © 2026 Teach The World Bible College. All rights reserved.
+            © 2026 Teach The World Bible Institute. All rights reserved.
           </p>
         </div>
       </div>
