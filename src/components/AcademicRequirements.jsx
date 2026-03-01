@@ -443,8 +443,8 @@ const AcademicRequirements = () => {
                 Ready to Begin Your Journey?
               </h3>
               <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
-                Downlaoad the Application Form and start to you journey in
-                learning more about God.
+                Fill the Application Form and start to you journey in learning
+                more about God.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
