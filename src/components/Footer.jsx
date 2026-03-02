@@ -168,7 +168,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 md:flex-row text-center ">
           <p className="text-gray-400 text-sm text-center">
-            © 2026 Teach The World Bible Institute. All rights reserved.
+            © 2026 Teach The Word Bible Institute. All rights reserved.
           </p>
         </div>
       </div>
