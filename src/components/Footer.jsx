@@ -24,7 +24,7 @@ const Footer = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Teach The World</h3>
+                <h3 className="text-xl font-bold">Teach The Word</h3>
                 <p className="text-amber-400 text-sm">Bible Institute</p>
               </div>
             </div>
